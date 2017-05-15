@@ -16,6 +16,7 @@ showip
 
 Also installed and selected by default this awesome theme:
 club-QuickBox
+
 Also includes MaterialDesign theme as an option.
 
 Tested and working on Synology and QNAP, but should work on any x86_64 devices.
@@ -28,7 +29,7 @@ Map a local volume to /downloads (Stores downloaded torrents)
 
 Sample run command:
 
-docker run -d --name=rutorrent-autodl-docker \
+docker run -d --name=rutorrent \
 -v /share/Container/rutorrent-docker/config:/config \
 -v /share/Container/rutorrent-docker/downloads:/downloads \
 -e PGID=0 -e PUID=0 -e TZ=Europe/Madrid \
