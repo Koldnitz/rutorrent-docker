@@ -1,6 +1,6 @@
 # rutorrent-docker
 
-This is a completely funcional Docker image with rutorrent 3.7, rtorrent 0.9.4, libtorrent 0.13.4 and a lot of plugins 
+This is a completely funcional Docker image with rutorrent 3.7, rtorrent 0.9.6, libtorrent 0.13.6 and a lot of plugins 
 for rutorrent, like autodl-irssi, filemanager, fileshare and other useful ones.
 
 Based on Alpine Linux, which provides a very small size. Includes plugins:
