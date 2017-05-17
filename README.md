@@ -23,10 +23,10 @@ Also includes MaterialDesign theme as an option.
 Tested and working on Synology and QNAP, but should work on any x86_64 devices.
 
 Instructions:
-Map any local port to 443 for SSL rutorrent access
-Map any local port to 51415 for rtorrent
-Map a local volume to /config (Stores configuration data, including rtorrent session directory. Consider this on SSD Disk)
-Map a local volume to /downloads (Stores downloaded torrents)
+- Map any local port to 443 for SSL rutorrent access
+- Map any local port to 51415 for rtorrent
+- Map a local volume to /config (Stores configuration data, including rtorrent session directory. Consider this on SSD Disk)
+- Map a local volume to /downloads (Stores downloaded torrents)
 
 Sample run command:
 
