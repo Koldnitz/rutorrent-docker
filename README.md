@@ -4,10 +4,11 @@ This is a completely funcional Docker image with rutorrent, rtorrent, libtorrent
 for rutorrent, like autodl-irssi, filemanager, fileshare and other useful ones. (IMPORTANT: Be careful, some private trackers
 have blacklisted 0.9.6 version. Use 0.9.4 branch instead.)
 
+[![](https://images.microbadger.com/badges/version/romancin/rutorrent:devel.svg)](https://microbadger.com/images/romancin/rutorrent "Docker image version")
+[![](https://images.microbadger.com/badges/image/romancin/rutorrent:devel.svg)](https://microbadger.com/images/romancin/rutorrent "Docker image size")
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X2CT2SWQCP74U)
 
-You can invite me a beer if you want ;)
-
+You can invite me a beer if you want ;) 
 Based on Alpine Linux, which provides a very small size. Includes plugins:
 logoff
 fileshare
