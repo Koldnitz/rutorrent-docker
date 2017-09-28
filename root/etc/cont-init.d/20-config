@@ -4,7 +4,6 @@
 mkdir -p \
         /config{/log/nginx,/log/rtorrent,/log/rutorrent,/nginx,/nginx/conf.d,/php,/rtorrent/rtorrent_sess,/rutorrent/settings/users} \
 	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
-	#/downloads{/completed,/incoming,/watched} \
 	/run{/nginx,/php} \
 	/var/lib/nginx/tmp/client_body
 
