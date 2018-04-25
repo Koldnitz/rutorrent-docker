@@ -2,21 +2,36 @@
 
 # make folders (Original)
 # mkdir -p \
-        /config{/log/nginx,/log/rtorrent,/log/rutorrent,/nginx,/nginx/conf.d,/php,/rtorrent/rtorrent_sess,/rutorrent/settings/users} \
+	/config{/log/nginx,/log/rtorrent,/log/rutorrent,/nginx,/nginx/conf.d,/php,/rtorrent/rtorrent_sess,/rutorrent/settings/users} \
 	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
-	/downloads{/completed,/incoming,/watched} \
-	/run{/nginx,/php} \
-	/var/lib/nginx/tmp/client_body
-
-# make folders
-mkdir -p \
-	/config{/log/nginx,/log/rtorrent,/log/rutorrent,/nginx,/nginx/conf.d,/php,/rtorrent/rtorrent_sess,/rutorrent/settings/users,/.irssi} \
-	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
+        /downloads{/completed,/incoming,/watched} \ 
 	/run{/nginx,/php} \
 	/var/lib/nginx/tmp/client_body
 	
-mkdir -p /downloads/watch/{bajaunapeli,bitspyder,torrentfactory,hachede,hdcity,learnflakes,puntotorrent,tbplus,waffles,xbytes,otros,pedros,cinemaggedon,torrentland,tunetraxx,brokenstones,32pages,lztr,p2pelite,bitgamer,psytorrents,pleasuredome,hdspain,iptorrents,trancetraffic,morethantv,passthepopcorn,gp32spain,gazellegames,opencd,mteam,retrowithin,divteam,racingforme,bibliotik,beyondhd,myanonamouse,ultimategamer,x264,awesomehd,broadcasthenet,bitme,theplace,theshow,thegeeks,thevault,theempire,theoccult,torrentleech,hdbits,zonaq,torrentech,sceneaccess,efectodoppler,musicvids,apollo,passtheheadphones,notwhatcd}
-mkdir -p /downloads/{bajaunapeli,bitspyder,torrentfactory,hachede,hdcity,learnflakes,puntotorrent,tbplus,waffles,xbytes,otros,pedros,cinemaggedon,torrentland,tunetraxx,brokenstones,32pages,lztr,p2pelite,bitgamer,psytorrents,pleasuredome,hdspain,iptorrents,trancetraffic,morethantv,passthepopcorn,gp32spain,gazellegames,opencd,mteam,retrowithin,divteam,racingforme,bibliotik,beyondhd,myanonamouse,ultimategamer,x264,awesomehd,broadcasthenet,bitme,theplace,theshow,thegeeks,thevault,theempire,theoccult,torrentleech,hdbits,zonaq,torrentech,sceneaccess,efectodoppler,musicvids,apollo,passtheheadphones,notwhatcd}
+# make folders (Romancin)
+# mkdir -p \
+	/config{/log/nginx,/log/rtorrent,/log/rutorrent,/nginx,/nginx/conf.d,/php,/rtorrent/rtorrent_sess,/rutorrent/settings/users,/.irssi} \
+	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
+																																																																																																																																																						   
+																																																																																																																																																								 
+	/run{/nginx,/php} \
+	/var/lib/nginx/tmp/client_body
+	
+# mkdir -p /downloads/watch/{bajaunapeli,bitspyder,torrentfactory,hachede,hdcity,learnflakes,puntotorrent,tbplus,waffles,xbytes,otros,pedros,cinemaggedon,torrentland,tunetraxx,brokenstones,32pages,lztr,p2pelite,bitgamer,psytorrents,pleasuredome,hdspain,iptorrents,trancetraffic,morethantv,passthepopcorn,gp32spain,gazellegames,opencd,mteam,retrowithin,divteam,racingforme,bibliotik,beyondhd,myanonamouse,ultimategamer,x264,awesomehd,broadcasthenet,bitme,theplace,theshow,thegeeks,thevault,theempire,theoccult,torrentleech,hdbits,zonaq,torrentech,sceneaccess,efectodoppler,musicvids,apollo,passtheheadphones,notwhatcd}
+# mkdir -p /downloads/{bajaunapeli,bitspyder,torrentfactory,hachede,hdcity,learnflakes,puntotorrent,tbplus,waffles,xbytes,otros,pedros,cinemaggedon,torrentland,tunetraxx,brokenstones,32pages,lztr,p2pelite,bitgamer,psytorrents,pleasuredome,hdspain,iptorrents,trancetraffic,morethantv,passthepopcorn,gp32spain,gazellegames,opencd,mteam,retrowithin,divteam,racingforme,bibliotik,beyondhd,myanonamouse,ultimategamer,x264,awesomehd,broadcasthenet,bitme,theplace,theshow,thegeeks,thevault,theempire,theoccult,torrentleech,hdbits,zonaq,torrentech,sceneaccess,efectodoppler,musicvids,apollo,passtheheadphones,notwhatcd}
+																															   
+	
+# make folders (Koldnitz)
+mkdir -p \
+	/config{/log/nginx,/log/rtorrent,/log/rutorrent,/nginx,/nginx/conf.d,/php,/rtorrent/rtorrent_sess,/rutorrent/settings/users,/.irssi} \
+	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
+																																																																																																																																																						   
+																																																																																																																																																								 
+	/run{/nginx,/php} \
+	/var/lib/nginx/tmp/client_body
+	
+mkdir -p /downloads/
+																															   
 
 
 # copy config
@@ -46,6 +61,7 @@ if [ ! -e "/config/php/php.ini" ]; then
 	sed -i -e 's/\(register_argc_argv .*=\).*/\1 On/g' /config/php/php.ini
 fi
 
+
 cp /config/php/php.ini /etc/php7/php.ini
 
 # create symlink for webui files
@@ -59,7 +75,7 @@ cp /config/php/php.ini /etc/php7/php.ini
 # permissions
 chown abc:abc \
 	/downloads \
-	/downloads{/completed,/incoming,/watched}
+	
 
 chown -R abc:abc \
 	/config \

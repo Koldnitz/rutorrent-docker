@@ -1,12 +1,12 @@
 FROM lsiobase/alpine:3.7
 
-MAINTAINER romancin
+MAINTAINER koldnitz
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 ARG BUILD_CORES
-LABEL build_version="Romancin version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL build_version="Koldnitz version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package version
 ARG MEDIAINF_VER="17.12"
@@ -32,6 +32,7 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
         tar \
         unrar \
         unzip \
+		sox \
         wget \
         irssi \
         irssi-perl \
@@ -109,6 +110,7 @@ mv rutorrent-thirdparty-plugins/* . && \
 rm -rf rutorrent-thirdparty-plugins && \
 cd /usr/share/webapps/rutorrent/ && \
 chmod 755 plugins/filemanager/scripts/* && \
+rm -rf plugins/fileupload && \
 cd /tmp && \
 git clone https://github.com/mcrapet/plowshare.git && \
 cd plowshare/ && \
@@ -127,7 +129,7 @@ git clone https://github.com/Gyran/rutorrent-pausewebui pausewebui && \
 git clone https://github.com/Gyran/rutorrent-ratiocolor ratiocolor && \
 sed -i 's/changeWhat = "cell-background";/changeWhat = "font";/g' /usr/share/webapps/rutorrent/plugins/ratiocolor/init.js && \
 git clone https://github.com/Gyran/rutorrent-instantsearch instantsearch && \
-git clone https://github.com/astupidmoose/rutorrent-logoff logoff && \
+git clone https://github.com/Korni22/rutorrent-logoff logoff && \
 git clone https://github.com/xombiemp/rutorrentMobile && \
 git clone https://github.com/dioltas/AddZip && \
 
@@ -194,5 +196,5 @@ wget -qO- https://github.com/rakshasa/rtorrent/archive/${RTORRENT_VER}.tar.gz | 
 COPY root/ /
 
 # ports and volumes
-EXPOSE 443 51415 3000
+EXPOSE 443 51415
 VOLUME /config /downloads
