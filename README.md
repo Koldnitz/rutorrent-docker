@@ -1,6 +1,6 @@
 # rutorrent-docker
 
-This is a completely funcional Docker image with rutorrent, rtorrent, libtorrent and a lot of plugins 
+This is a completely functional Docker image with rutorrent, rtorrent, libtorrent and a lot of plug-ins 
 for rutorrent, like autodl-irssi, filemanager, fileshare and other useful ones. (IMPORTANT: Be careful, some private trackers
 have blacklisted 0.9.6 version. Use 0.9.4 branch instead.)
 
@@ -10,7 +10,7 @@ have blacklisted 0.9.6 version. Use 0.9.4 branch instead.)
 
 You can invite me a beer if you want ;) 
 
-Based on Alpine Linux, which provides a very small size. Includes plugins:
+Based on Alpine Linux, which provides a very small size. Includes plug-ins:
 logoff
 fileshare
 filemanager
@@ -64,4 +64,4 @@ docker run -d --name=rutorrent \
 romancin/rutorrent:0.9.4
 ```
 
-Rememeber editing /config/rtorrent/rtorrent.rc with your own settings, specially your watch subfolder configuration.
+Remember editing /config/rtorrent/rtorrent.rc with your own settings, specially your watch sub-folder configuration.
