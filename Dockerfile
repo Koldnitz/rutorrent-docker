@@ -9,16 +9,16 @@ ARG BUILD_CORES
 LABEL build_version="Koldnitz version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package version
-ARG MEDIAINF_VER="17.12"
+ARG MEDIAINF_VER="18.03.1"
 ARG RTORRENT_VER="0.9.6"
 ARG LIBTORRENT_VER="0.13.6"
-ARG CURL_VER="7.57.0"
+ARG CURL_VER="7.59.0"
 
 # set env
 ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 ENV LD_LIBRARY_PATH=/usr/local/lib
 ENV CONTEXT_PATH=/
-    
+
 RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
  apk add --no-cache \
         ca-certificates \
@@ -129,7 +129,6 @@ git clone https://github.com/Gyran/rutorrent-pausewebui pausewebui && \
 git clone https://github.com/Gyran/rutorrent-ratiocolor ratiocolor && \
 sed -i 's/changeWhat = "cell-background";/changeWhat = "font";/g' /usr/share/webapps/rutorrent/plugins/ratiocolor/init.js && \
 git clone https://github.com/Gyran/rutorrent-instantsearch instantsearch && \
-git clone https://github.com/Korni22/rutorrent-logoff logoff && \
 git clone https://github.com/xombiemp/rutorrentMobile && \
 git clone https://github.com/dioltas/AddZip && \
 
