@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM lsiobase/alpine:3.8
 
 MAINTAINER koldnitz
 
@@ -9,10 +9,10 @@ ARG BUILD_CORES
 LABEL build_version="Koldnitz version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package version
-ARG MEDIAINF_VER="18.03.1"
+ARG MEDIAINF_VER="18.05"
 ARG RTORRENT_VER="0.9.6"
 ARG LIBTORRENT_VER="0.13.6"
-ARG CURL_VER="7.59.0"
+ARG CURL_VER="7.61.0"
 
 # set env
 ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
@@ -32,7 +32,7 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
         tar \
         unrar \
         unzip \
-		sox \
+	sox \
         wget \
         irssi \
         irssi-perl \
