@@ -2,8 +2,7 @@
 This is all based on a very smart guy named Romancin's rutorrent docker .... I have just customized a file so that I do not have to delete automatically created directories everytime i rebuild the docker.
 
 This is a completely functional Docker image with rutorrent, rtorrent, libtorrent and a lot of plug-ins 
-for rutorrent, like autodl-irssi, filemanager, fileshare and other useful ones. (IMPORTANT: Be careful, some private trackers
-have blacklisted 0.9.6 version. Use 0.9.4 branch instead.)
+for rutorrent, like autodl-irssi, filemanager, fileshare and other useful ones.
 
 [![](https://images.microbadger.com/badges/version/romancin/rutorrent.svg)](https://microbadger.com/images/romancin/rutorrent "Docker image version")
 [![](https://images.microbadger.com/badges/image/romancin/rutorrent.svg)](https://microbadger.com/images/romancin/rutorrent "Docker image size")
@@ -59,6 +58,6 @@ docker run -d --name=rutorrent \
 -p 51415-51415:51415-51415 \
 romancin/rutorrent:latest
 
-
+```
 
 Remember editing /config/rtorrent/rtorrent.rc with your own settings, specially your watch sub-folder configuration.
