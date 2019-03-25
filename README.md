@@ -1,5 +1,5 @@
 # rutorrent-docker
-This is all based on a very smart guy named Romancin's rutorrent docker .... I have just customized a file so that I do not have to delete automatically created directories everytime I rebuild the docker.
+This is all based on a very smart guy named Romancin's rutorrent docker .... I have just customized a file so that I do not have to delete automatically created directories everytime i rebuild the docker.
 
 This is a completely functional Docker image with rutorrent, rtorrent, libtorrent and a lot of plug-ins 
 for rutorrent, like autodl-irssi, filemanager, fileshare and other useful ones.
@@ -56,7 +56,7 @@ docker run -d --name=rutorrent \
 -e PGID=0 -e PUID=0 -e TZ=Europe/Madrid \
 -p 9443:443 \
 -p 51415-51415:51415-51415 \
-koldnitz/rutorrent-docker:latest
+romancin/rutorrent:latest
 
 ```
 
