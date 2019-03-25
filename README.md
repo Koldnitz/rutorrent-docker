@@ -27,8 +27,6 @@ club-QuickBox
 
 Also includes MaterialDesign theme as an option.
 
-16/03/2018: NEW: rTorrent 0.9.7 / libtorrent 0.13.7 version. rtorrent.rc file has changed completely, rename it before starting with the new image the first time. After first run, add the changes you need to this config file.
-
 01/08/2018: NEW: Includes Pyrocore/rtcontrol - http://pyrocore.readthedocs.io/en/latest/index.html
 
 You need to run pyrocore commands with user "abc", which is who runs rtorrent, so use "su - abc" after connecting container before using pyrocore commands. If you already have torrents in your rtorrent docker instance, you have to add extra information before using pyrocore, check here: http://pyrocore.readthedocs.io/en/latest/setup.html in the "Adding Missing Data to Your rTorrent Session" topic.
@@ -47,18 +45,28 @@ In order to change rutorrent web access password execute this inside container:
 
 Sample run command:
 
+For rtorrent 0.9.6 version: \
 
-For rtorrent 0.9.7 version:
-
- ```bash
+```bash
 docker run -d --name=rutorrent \
--v /share/Container/rutorrent/config:/config \
--v /share/Container/rutorrent/downloads:/downloads \
+-v /share/Container/rutorrent-docker/config:/config \
+-v /share/Container/rutorrent-docker/downloads:/downloads \
 -e PGID=0 -e PUID=0 -e TZ=Europe/Madrid \
 -p 9443:443 \
 -p 51415-51415:51415-51415 \
 romancin/rutorrent:latest
+```
 
+For rtorrent 0.9.4 version: \
 
+```bash
+docker run -d --name=rutorrent \
+-v /share/Container/rutorrent-docker/config:/config \
+-v /share/Container/rutorrent-docker/downloads:/downloads \
+-e PGID=0 -e PUID=0 -e TZ=Europe/Madrid \
+-p 9443:443 \
+-p 51415-51415:51415-51415 \
+romancin/rutorrent:0.9.4
+```
 
 Remember editing /config/rtorrent/rtorrent.rc with your own settings, specially your watch sub-folder configuration.
